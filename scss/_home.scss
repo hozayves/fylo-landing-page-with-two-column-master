@@ -1,0 +1,321 @@
+body {
+    display: flel;
+    flex-direction: column;
+    font-family: $font-body;
+    font-size: 1rem;
+    // padding: 1em;
+    background-color: #fff;
+    background-image: url(../images/bg-curve-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+    background-size: 100% 50px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+    &__logo {
+        height: 30px;
+        width: 70px;
+        align-self: center;
+    }
+    &__nav {
+        &-menu {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            &-item {
+                list-style-type: none;
+                margin-right: 0.7rem;
+                font-family: $font-other;
+                font-weight: 400;
+                &:hover {
+                    cursor: pointer;
+                    color: darken(map-get($colors, 'light-grayish-blue'), 70%);
+                }
+                &:nth-last-child(1) {
+                    margin: 0;
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    .intro {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        &__body {
+            order: 1;
+            margin-top: 2rem;
+            &__title {
+                text-align: center;
+                font-weight: $font-other;
+                font-weight: 700;
+                font-size: 1.7rem;
+                color: map-get($colors, 'very-dark-blue')
+            }
+            &__desc {
+                padding: 0 1rem;
+                text-align: center;
+                text-align-last: center;
+                text-transform: capitalize;
+                line-height: 1.4;
+                font-size: 1rem;
+                white-space: wrap;
+                font-family: $font-body;
+                color: map-get($colors, 'desaturated');
+                margin-top: 1.5rem;
+
+            }
+            &__input {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 2.5rem;
+                gap: 1rem;
+                &-text {
+                    border: thin solid map-get($colors, 'very-dark-blue');
+                    height:50px;
+                    padding: 1rem;
+                    font-family: $font-other;
+                    font-size: 1rem;
+                    border-radius: 5px;
+                }
+                &-button {
+                    text-align: center;
+                    color: map-get($colors, 'light-grayish-blue');
+                    background-color: map-get($colors, 'bright-blue');
+                    border-radius: 10px;
+                    border: none;
+                    padding: 1rem;
+                    font-weight: 700;
+                    box-shadow: 2px 2px 4px -1px map-get($colors, 'very-dark-blue');
+                }
+            }
+        }
+        &__img {
+            order: 0
+        }
+    }
+    .msg {
+        // border: 1px solid red;
+        padding: 1rem;
+        margin-top: 3rem;
+        background-color: map-get($colors, 'light-grayish-blue');
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        &__illustration {
+            order: 0;
+        }
+        &__content {
+            order: 1;
+            margin-top: 4rem;
+
+            &__title {
+                text-align:center;
+                font-size: 1.2rem;
+                text-transform: capitalize;
+                font-family: $font-other;
+                color: map-get($colors, 'very-dark-blue')
+            }
+            &__body {
+                text-align: left;
+                color: map-get($colors, 'desaturated');
+                font-family: $font-body;
+                font-size: 1rem;
+            }
+            &__link {
+                // border: 1px solid red;
+                width: 100%;
+                text-align: center;
+                margin-top: 2rem;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    color: map-get($colors, 'moderate-cyan');
+                    font-weight: 400;
+                    text-decoration: none;
+                    span, img {
+                        border-bottom: 1px solid map-get($colors, 'moderate-cyan');
+                        padding-bottom: 3px;
+                        padding-right: 2px;
+                    }
+                }
+                &-text {
+                    margin-right: 3px;
+                }
+                &-icon {
+                    height: 30px;
+                }
+            }
+            &__quotes {
+                margin-top: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem;
+                background-color: lighten(map-get($colors, 'light-grayish-blue'), 90%);
+                border-radius: 10px;
+                box-shadow: 1px 1px 8px -2px rgba(0,0,0,0.53);
+                &__icon {
+                    height: 25px;
+                }
+                &__text {
+                    margin-top: 5px;
+                    font-family: $font-body;
+                    font-size: 400;
+                    text-transform: capitalize;
+                    color: map-get($colors, 'desaturated');
+                    font-size: 1rem;
+                    line-height: 1.4l
+                }
+                &__user {
+                    display: flex;
+                    margin-top: 1.3rem;
+                    margin-bottom: 1rem;
+                    &__img {
+                        border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
+                    }
+                    &__info{
+                        margin-left: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        &__name {
+                            font-size: 1rem;
+                            color: map-get($colors, 'very-dark-blue');
+                            font-weight: 700;
+                            font-family: $font-other;
+                        }
+                        &__title {
+                            margin: 0;
+                            font-family: $font-other;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .access {
+        background-color: map-get($colors, 'desaturated');
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: map-get($colors, 'light-grayish-blue');
+        padding: 2rem;
+        &__text{
+            &__title{
+                font-size: 1.5rem;
+            }
+            &__body{
+                line-height: 1.4;
+                text-align: center;
+                text-align-last: center;
+                text-transform: capitalize;
+            }
+        }
+        &__form {
+            margin-top: 2rem;
+            width:90%;
+            &__input {
+                border: thin solid map-get($colors, 'very-dark-blue');
+                height:50px;
+                padding: 1rem;
+                font-family: $font-other;
+                font-size: 1rem;
+                border-radius: 5px;
+                width: 100%;
+            }
+            &__btn {
+                text-align: center;
+                color: map-get($colors, 'light-grayish-blue');
+                background-color: map-get($colors, 'bright-blue');
+                border-radius: 10px;
+                border: none;
+                padding: 1rem;
+                font-weight: 700;
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+footer {
+    border: 1px solid red;
+    background-color: map-get($colors, 'very-dark-blue');
+    color: map-get($colors, 'light-grayish-blue');
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .company {
+        width: 100%;
+        margin-top: 2rem;
+        &__logo{
+            width: 250px;
+            height: 80px;
+            margin-bottom: 2rem;
+        }
+        &__contact{
+            display: flex;
+            &__icon {
+                margin-right: 1.5rem;
+                height: 20px;
+                width: 25px;
+                align-self: center;
+            }
+            &__text {
+                font-size: 1.4rem;
+            }
+        }
+        &__contact:nth-last-child(1) {
+            margin-top: 1rem;
+        }
+    }
+    .links {
+        // border: 1px solid red;
+        font-size: 1.5rem;
+        font-family: $font-other;
+        margin-top: 1rem;
+        .link {
+            padding: 0;
+            &__item {
+                list-style-type: none;
+                padding: 0.5rem;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+        }
+    }
+    .social-media {
+        display: flex;
+        align-self: center;
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        i{
+            border: 2px solid #fff;
+            padding: 0.8rem;
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            margin-left: 1rem;
+            cursor: pointer
+        }
+    }
+}
