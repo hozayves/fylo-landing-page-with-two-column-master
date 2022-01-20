@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@0,400;0,700;1,700&display=swap');
 // CSS RESET =======================================
 
 // Box sizing rules
@@ -61,4 +62,5 @@ $colors: (
     'light-grayish-blue' : hsl(240, 75%, 98%),
     'light-gray' : hsl(0, 0%, 75%),
 );
-$font-family: 'Open-sans';
+$font-other: 'Raleway'; // Headings, Call to action, Header Navigation 
+$font-body: 'Open sans'; // Body
