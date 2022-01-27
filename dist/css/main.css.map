@@ -4,7 +4,8 @@
     "sources": [
         "../../scss/main.scss",
         "../../scss/_config.scss",
-        "../../scss/_home.scss"
+        "../../scss/_home.scss",
+        "../../scss/_responsive.scss"
     ],
     "names": [],
     "file": "main.css"
