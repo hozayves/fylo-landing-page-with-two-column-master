@@ -1,56 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@0,400;0,700;1,700&display=swap');
-// CSS RESET =======================================
-
-// Box sizing rules
-*,*::after,*::before {
-    box-sizing: border-box;
-}
-// Remove default margin
-html, body, h1,h2,h3,h4,h5,h6,figure,blockquote,dl,dd {
-    margin: 0;
-    padding: 0;
-}
-// Remove list style on ul, ol elements with a list role
-ul[role='list'],
-ol[role='list'] {
-    list-style: none;
-}
-// set core root defaults
-html:focus-within {
-    scroll-behavior: smooth;
-}
-// Set core body defaults
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-}
-// Make image/picture easier to work with
-img,
-picture {
-    max-width: 100%;
-    display: block;
-}
-// Inherit fonts for input and button
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-// Remove all animations, transitions and smooth scroll for people that prefer to not see them
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
-    *,*::before,*::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1!important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto!important;
-    }
-}
-// END OF CSS RESET =================================================================
 $colors: (
     // Primary
     'very-dark-blue' : hsl(243, 87%, 12%),
@@ -64,12 +12,13 @@ $colors: (
 );
 $font-other: 'Raleway'; // Headings, Call to action, Header Navigation 
 $font-body: 'Open sans'; // Body
-
-@mixin medium-screen {
+// Medium screen media query
+@mixin Ipad-screen {
     @media screen and (min-width: 768px) {
         @content;
     }
 }
+// Large screen media query
 @mixin large-screen {
     @media screen and (min-width: 980px) {
         @content;
