@@ -34,10 +34,10 @@
                 <div class="intro__body__input">
                     <form action="#!">
                         <div>
-                            <input class="intro__body__input-text" type="text" placeholder="Enter your email">
-                            <span>Please check your email</span>
+                            <input class="intro__body__input-text" id="email" type="text" placeholder="Enter your email">
+                            <span></span>
                         </div>
-                        <input class="intro__body__input-button" type="submit" value="Get Started">
+                        <input class="intro__body__input-button" id="validateEmail" type="submit" value="Get Started">
                     </form>
                 </div>
             </div>
@@ -88,9 +88,9 @@
                 </p>
             </div>
             <div class="access__form">
-                <input class="access__form__input" type="text"  placeholder="email@example.com">
-                <span>Please check your email</span>
-                <input class="access__form__btn" type="submit" value="Get Started For Free">
+                <input class="access__form__input" id="email-2" type="text"  placeholder="email@example.com">
+                <span></span>
+                <input class="access__form__btn" id="validateEmail-2" type="submit" value="Get Started For Free">
             </div>
         </section>
     </main>
@@ -131,5 +131,6 @@
             </article>
         </section>
     </footer>
+    <script src="./dist/js/index.js" defer></script>
 </body>
 </html>
