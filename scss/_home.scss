@@ -1,9 +1,8 @@
 body {
-    display: flel;
+    display: flex;
     flex-direction: column;
     font-family: $font-body;
     font-size: 1rem;
-    // padding: 1em;
     background-color: #fff;
     background-image: url(../images/bg-curve-mobile.svg);
     background-repeat: no-repeat;
@@ -17,26 +16,29 @@ body {
     padding: 1rem 1rem 0 1rem;
     &__logo {
         height: 30px;
-        width: 70px;
+        width: 100px;
         align-self: center;
     }
     &__nav {
+        width: 75%;
         &-menu {
             display: flex;
             flex-direction: row;
+            justify-content: flex-end;
             margin: 0;
+            padding:0;
             &-item {
                 list-style-type: none;
-                margin-right: 0.7rem;
+                margin-right: 0.5rem;
                 font-family: $font-other;
                 font-weight: 400;
+                font-size: 1rem;
                 &:hover {
                     cursor: pointer;
                     color: darken(map-get($colors, 'light-grayish-blue'), 70%);
                 }
                 &:nth-last-child(1) {
                     margin: 0;
-                    width: 50px;
                 }
             }
         }
@@ -47,11 +49,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    padding-top: 2rem;
     .intro {
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        padding: 2rem;
         &__body {
             order: 1;
             margin-top: 2rem;
@@ -60,7 +62,7 @@ main {
                 font-weight: $font-other;
                 font-weight: 700;
                 font-size: 1.7rem;
-                color: map-get($colors, 'very-dark-blue')
+                color: map-get($colors, 'very-dark-blue');
             }
             &__desc {
                 padding: 0 1rem;
@@ -76,11 +78,24 @@ main {
 
             }
             &__input {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 margin-top: 2.5rem;
                 gap: 1rem;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    div {
+                        display: flex; 
+                        flex-direction: column;
+                        span {
+                            font-size: 0.8rem;
+                            font-family: $font-other;
+                            color: #d10b0b;
+                            padding: 0.5rem;
+                            padding-left: 0;
+                        }
+                    }
+                }
                 &-text {
                     border: thin solid map-get($colors, 'very-dark-blue');
                     height:50px;
@@ -88,16 +103,23 @@ main {
                     font-family: $font-other;
                     font-size: 1rem;
                     border-radius: 5px;
+                    &:focus {
+                        outline: none;
+                    }
                 }
                 &-button {
                     text-align: center;
                     color: map-get($colors, 'light-grayish-blue');
                     background-color: map-get($colors, 'bright-blue');
-                    border-radius: 10px;
+                    border-radius: 5px;
                     border: none;
                     padding: 1rem;
                     font-weight: 700;
                     box-shadow: 2px 2px 4px -1px map-get($colors, 'very-dark-blue');
+                    &:hover {
+                        background-color: darken(map-get($colors, 'light-grayish-blue'), 30%);
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -106,8 +128,7 @@ main {
         }
     }
     .msg {
-        // border: 1px solid red;
-        padding: 1rem;
+        padding: 2rem;
         margin-top: 3rem;
         background-color: map-get($colors, 'light-grayish-blue');
         display: flex;
@@ -124,8 +145,7 @@ main {
 
             &__title {
                 text-align:center;
-                font-size: 1.2rem;
-                text-transform: capitalize;
+                font-size: 1.7rem;
                 font-family: $font-other;
                 color: map-get($colors, 'very-dark-blue')
             }
@@ -136,27 +156,25 @@ main {
                 font-size: 1rem;
             }
             &__link {
-                // border: 1px solid red;
                 width: 100%;
                 text-align: center;
                 margin-top: 2rem;
                 a {
-                    display: flex;
-                    justify-content: center;
+                    display: inline-block;
                     color: map-get($colors, 'moderate-cyan');
                     font-weight: 400;
                     text-decoration: none;
-                    span, img {
-                        border-bottom: 1px solid map-get($colors, 'moderate-cyan');
-                        padding-bottom: 3px;
-                        padding-right: 2px;
-                    }
+                    border-bottom: 1px solid map-get($colors, 'moderate-cyan');
+                    vertical-align: baseline;
                 }
                 &-text {
                     margin-right: 3px;
                 }
                 &-icon {
-                    height: 30px;
+                    height: 25px;
+                    width: auto;
+                    float: right;
+                    margin-left: 0.5rem;
                 }
             }
             &__quotes {
@@ -174,27 +192,26 @@ main {
                 &__text {
                     margin-top: 5px;
                     font-family: $font-body;
-                    font-size: 400;
+                    font-weight: 400;
                     text-transform: capitalize;
                     color: map-get($colors, 'desaturated');
                     font-size: 1rem;
-                    line-height: 1.4l
+                    line-height: 1.4;
                 }
                 &__user {
                     display: flex;
-                    margin-top: 1.3rem;
                     margin-bottom: 1rem;
                     &__img {
                         border-radius: 50%;
-                        width: 60px;
-                        height: 60px;
+                        width: 40px;
+                        height: 40px;
                     }
                     &__info{
                         margin-left: 10px;
                         display: flex;
                         flex-direction: column;
                         &__name {
-                            font-size: 1rem;
+                            font-size: 0.8rem;
                             color: map-get($colors, 'very-dark-blue');
                             font-weight: 700;
                             font-family: $font-other;
@@ -202,7 +219,7 @@ main {
                         &__title {
                             margin: 0;
                             font-family: $font-other;
-                            font-size: 1rem;
+                            font-size: 0.7rem;
                         }
                     }
                 }
@@ -229,8 +246,16 @@ main {
             }
         }
         &__form {
-            margin-top: 2rem;
+            margin-top: 2rem;;
             width:90%;
+            display: flex;
+            flex-direction: column;
+            span {
+                font-size: .8rem;
+                font-weight: 400;
+                padding: 5px;
+                text-align: left;
+            }
             &__input {
                 border: thin solid map-get($colors, 'very-dark-blue');
                 height:50px;
@@ -244,12 +269,16 @@ main {
                 text-align: center;
                 color: map-get($colors, 'light-grayish-blue');
                 background-color: map-get($colors, 'bright-blue');
-                border-radius: 10px;
+                border-radius: 5px;
                 border: none;
                 padding: 1rem;
                 font-weight: 700;
                 width: 100%;
                 margin-top: 1rem;
+                &:hover {
+                    background-color: darken(map-get($colors, 'light-grayish-blue'), 30%);
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -257,18 +286,22 @@ main {
 footer {
     background-color: map-get($colors, 'very-dark-blue');
     color: map-get($colors, 'light-grayish-blue');
-    padding: 2rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    font-size: 1.5rem;
+    .footer__logo {
+        width: 150px;
+        height: 80px;
+        align-self: flex-start;
+    }
+    section{
+        width: 100%;
+    }
     .company {
         width: 100%;
         margin-top: 2rem;
-        &__logo{
-            width: 250px;
-            height: 80px;
-            margin-bottom: 2rem;
-        }
         &__contact{
             display: flex;
             &__icon {
@@ -278,7 +311,7 @@ footer {
                 align-self: center;
             }
             &__text {
-                font-size: 1.4rem;
+                font-size: 1.1rem;
             }
         }
         &__contact:nth-last-child(1) {
@@ -286,8 +319,7 @@ footer {
         }
     }
     .links {
-        // border: 1px solid red;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-family: $font-other;
         margin-top: 1rem;
         .link {
@@ -296,13 +328,21 @@ footer {
                 list-style-type: none;
                 padding: 0.5rem;
                 text-transform: capitalize;
-                cursor: pointer;
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: map-get($colors, 'light-grayish-blue');
+                    &:hover {
+                        color: map-get($colors, 'bright-blue')
+                    }
+                }
             }
         }
     }
     .social-media {
         display: flex;
         align-self: center;
+        justify-content: center;
         font-size: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -314,7 +354,10 @@ footer {
             width: 60px;
             text-align: center;
             margin-left: 1rem;
-            cursor: pointer
+            &:hover {
+                color: map-get($colors, 'bright-blue');
+                cursor: pointer;
+            }
         }
     }
 }
